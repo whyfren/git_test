@@ -8,9 +8,6 @@ radius = 31.0
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speed = null
-gravity = null
-jump_force = null
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
