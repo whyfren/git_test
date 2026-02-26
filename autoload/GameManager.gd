@@ -10,28 +10,23 @@ var current_spawn : PlayerSpawn
 func test():
 	print("this is from auto load")
 
+# fungsi buat spawn/respawn player
 func spawn_player(parent):
-	print("SPAWN PLAYER DIPANGGIL")
-	print("player scene:", player_scene)
-	print("spawn point:", current_spawn)
-	print("parent:", parent)
+	# debug apakah player scene ada
 	if player_scene == null:
 		print("Player scene belum di assign di GameManager!")
 		return
-	
+	# ngeset biar player lama dihapus, biar ga double nanti
 	if player:
 		player.queue_free()
-
+	# spawn player lagi
 	player = player_scene.instance()
 	parent.add_child(player)
-
+	# nyamain posisi spawn player sama posisi player spawn
 	if current_spawn:
 		player.global_position = current_spawn.global_position
 	print("player instance:", player)
 
 # fungsi buat player mati
 func player_died():
-	print("fungsi mati kepanggil")
-	var parent : Node = get_parent()
-	print(parent.name)
-	spawn_player(parent)
+	spawn_player(self)
