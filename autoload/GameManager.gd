@@ -30,5 +30,8 @@ func spawn_player(parent):
 	print("player instance:", player)
 
 # fungsi buat player mati
-func on_player_died():
-	spawn_player(self)
+func player_died():
+	print("fungsi mati kepanggil")
+	var parent : Node = get_parent()
+	print(parent.name)
+	spawn_player(parent)
