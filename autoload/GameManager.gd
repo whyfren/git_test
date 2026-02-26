@@ -11,7 +11,7 @@ func test():
 	print("this is from auto load")
 
 # fungsi buat spawn/respawn player
-func spawn_player(parent):
+func player_spawn(parent):
 	# debug apakah player scene ada
 	if player_scene == null:
 		print("Player scene belum di assign di GameManager!")
@@ -29,4 +29,4 @@ func spawn_player(parent):
 
 # fungsi buat player mati
 func player_died():
-	spawn_player(self)
+	player_spawn(self)
