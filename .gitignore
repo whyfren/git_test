@@ -1,0 +1,18 @@
+# Godot cache
+.import/
+.godot/
+
+# Build hasil export
+export/
+build/
+
+# Editor lokal
+.editor_settings-*.tres
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+*.tmp
