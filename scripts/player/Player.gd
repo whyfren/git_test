@@ -8,7 +8,8 @@ var velocity = Vector2.ZERO
 var UP = Vector2.UP # Arah atas untuk fungsi move_and_slide
 
 func _ready():
-	pass
+	print("PLAYER SCRIPT JALAN")
+	print("gravity =", gravity)
 
 func _physics_process(delta):
 	# 1. Gravitasi
@@ -29,3 +30,6 @@ func _physics_process(delta):
 
 	# 4. Pergerakan & Tabrakan (Penting: move_and_slide di Godot 3 butuh arah UP)
 	velocity = move_and_slide(velocity, UP)
+	
+func respawn():
+	global_position = GameManager.current_position

@@ -5,4 +5,4 @@
 [node name="World" type="Node2D"]
 
 [node name="Level_Test" parent="." instance=ExtResource( 1 )]
-position = Vector2( 438, 440 )
+position = Vector2( 449, 439 )

@@ -5,6 +5,7 @@ extends Node
 var player_scene = preload("res://scenes/player/Player.tscn")
 var player
 var current_spawn : PlayerSpawn
+var current_position : Vector2 = Vector2.ZERO
 
 # buat ngetes autoload
 func test():
@@ -30,3 +31,6 @@ func player_spawn(parent):
 # fungsi buat player mati
 func player_died():
 	player_spawn(self)
+
+
+ 
