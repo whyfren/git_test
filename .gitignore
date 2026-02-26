@@ -1,0 +1,68 @@
+# =========================
+# GODOT GENERATED FILES
+# =========================
+.import/
+.export/
+.export_presets.cfg
+
+# Godot cache
+.godot/
+.import/
+
+# =========================
+# MONO / C# FILES
+# =========================
+.mono/
+data_*/
+mono_crash.*
+
+# build output
+bin/
+obj/
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# EDITOR / IDE FILES
+# =========================
+
+# VSCode
+.vscode/
+
+# Rider / JetBrains
+.idea/
+
+# Visual Studio
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.svd
+*.pdb
+
+# =========================
+# TEMP / LOG / CACHE
+# =========================
+*.log
+*.tmp
+*.cache
+
+# =========================
+# EXPORT BUILDS (opsional)
+# =========================
+build/
+dist/
+exports/
+
+# =========================
+# BACKUP FILES
+# =========================
+*~
+*.bak
+*.backup
