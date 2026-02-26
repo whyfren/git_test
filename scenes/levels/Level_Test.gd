@@ -1,7 +1,5 @@
 extends Node2D
 
-# declare class name biar gampang dicar di GameManager.gd
-class_name PlayerSpawn
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -10,7 +8,7 @@ class_name PlayerSpawn
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	GameManager.spawn_player(self)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

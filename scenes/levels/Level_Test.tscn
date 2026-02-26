@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/icon.png" type="Texture" id=1]
-[ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/systems/PlayerSpawn.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/levels/Level_Test.gd" type="Script" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -30,14 +31,12 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 0/z_index = 0
 
 [node name="Level_Test" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="TileMap_Terrain" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 format = 1
 tile_data = PoolIntArray( -196597, 0, 0, -196595, 0, 0, -196594, 0, 0, -196593, 0, 0, -196592, 0, 0, -196591, 0, 0, -65543, 0, 0, -131063, 0, 0, -131059, 0, 0, -7, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, 65529, 0, 0, 5, 0, 0, 7, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( -86, -89 )
-speed = 400
-gravity = 1000
-jump_force = -400
+[node name="PlayerSpawn" parent="." instance=ExtResource( 2 )]
+position = Vector2( -190, -57 )
